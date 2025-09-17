@@ -6,11 +6,13 @@ private: //private access specifier "abstracts" away complexity (of understandin
 	int height{};
 
 	std::string m_speciesName{};
+	int numberOfLegs{};
 protected:
 	double mass{}; //in pounds
 
 public:
-	Animal(const int height, const double mass, const std::string& name);
+	/*Note the initialization in the constructor definition -> most common? number of legs for an animal is 4 (maybe)*/
+	Animal(const int height, const double mass, int numberOfLegs = 4, const std::string& name = "TBD");
 
 	void printAnimalAttributes();
 };
@@ -32,7 +34,7 @@ private:
 	int tailLength{};
 
 public:
-	Dog(const int height, const double mass, const std::string& name,
+	Dog(const int height, const double mass, int numberOfLegs, const std::string& name,
 		const std::string& familiarName, FurinessLevel furriness, const int tailLength);
 
 	void printDogAttributes();

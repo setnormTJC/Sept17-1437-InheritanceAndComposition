@@ -8,19 +8,32 @@
 
 int main()
 {
-    Animal someAnimal(32, 51.2, "animal name"); //31 lbs, 51.2 inches
+
+    Animal someAnimal(32, 51.2, 2, "some Latin animal name"); //31 lbs, 51.2 inches high
+
+    Animal someOTHERAnimal(123, 45.67);
+    //NOTE! 4 legs (and speciesName) is omitted! (optional)
+
     std::cout << std::setw(15) << "Height(inches)";
     std::cout << std::setw(15) << "Mass(pounds)";
-    std::cout << std::setw(15) << "Name";
+    std::cout << std::setw(15) << "Leg count";
+    std::cout << std::setw(25) << "Species name";
     std::cout << "\n";
+    //make a row of = sign for a "table header row separator"
+    std::cout << std::setfill('=')<< std::setw(15 + 15 + 15 + 25);
+    std::cout << "\n";
+    std::cout << std::setfill(' '); //reset the fill character to space
 
     someAnimal.printAnimalAttributes();
-    //std::cout << "Hello World!\n";
+    someOTHERAnimal.printAnimalAttributes(); 
 
-    //Thelma the dog's attributes: 20 lbs, height is about 16 inches, mildly furry, 
+    //Thelma the dog's (approximate) attributes: 20 lbs, height is about 16 inches, mildly furry, 
     //species name is canis familiaris,11 inch long tail 
-    Dog myDog(16, 20, "canis familiaris", "Thelma (Noodle)", FurinessLevel::MildlyFurry, 11);
+    //and she has THREE legs (not 4)
+    Dog myDog(16, 20, 3, "canis familiaris", "Thelma (Noodle)", FurinessLevel::MildlyFurry, 11);
 
     myDog.printDogAttributes();
+
+    std::cout << "\n\n";
 }
 
