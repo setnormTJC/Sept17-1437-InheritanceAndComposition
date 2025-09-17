@@ -20,9 +20,10 @@ int main()
     std::cout << std::setw(25) << "Species name";
     std::cout << "\n";
     //make a row of = sign for a "table header row separator"
-    std::cout << std::setfill('=')<< std::setw(15 + 15 + 15 + 25);
-    std::cout << "\n";
-    std::cout << std::setfill(' '); //reset the fill character to space
+    // std::cout << std::setfill('=')<< std::setw(15 + 15 + 15 + 25);
+    // std::cout << "\n";
+    // std::cout << std::setfill(' '); //reset the fill character to space
+    std::cout << std::string(15 + 15 + 15 + 20, '=') << "\n";
 
     someAnimal.printAnimalAttributes();
     someOTHERAnimal.printAnimalAttributes(); 
