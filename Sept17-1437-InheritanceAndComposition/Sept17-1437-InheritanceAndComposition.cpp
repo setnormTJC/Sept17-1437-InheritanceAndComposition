@@ -35,5 +35,7 @@ int main()
     myDog.printDogAttributes();
 
     std::cout << "\n\n";
+
+    std::system("puppyDog.jpg");
 }
 
