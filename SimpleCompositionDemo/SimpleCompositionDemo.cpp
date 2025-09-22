@@ -17,7 +17,7 @@ struct Line
     ColorRGB lineColor; 
 };
 
-class NonCircularShape
+class Polygon
 {
     std::vector<Line> lines; 
 
@@ -25,12 +25,12 @@ class NonCircularShape
 
 };
 
-class Triangle : public NonCircularShape
+class Triangle : public Polygon
 {
 
 };
 
-class Rectangle : public NonCircularShape
+class Rectangle : public Polygon
 {
 
 };
