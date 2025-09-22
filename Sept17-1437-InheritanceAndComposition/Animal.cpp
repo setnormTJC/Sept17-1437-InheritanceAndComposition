@@ -2,6 +2,9 @@
 #include <iostream>
 #include <iomanip>
 
+
+
+/************************************ANIMAL Section************************************/
 Animal::Animal(const int height, const double mass, int numberOfLegs, const std::string& name)
     :height(height), mass(mass), numberOfLegs(numberOfLegs), m_speciesName(name)
 {
@@ -17,6 +20,15 @@ void Animal::printAnimalAttributes()
     std::cout << "\n";
 }
 
+
+void Animal::eat()
+{
+    std::cout << "Generic animal eating ...\n";
+    std::cout << "WHo knows if it's omnivore, carnivore, etc. (Use an abstract function?)";
+}
+
+
+/************************************DOG Section************************************/
 Dog::Dog(const int height, const double mass, int numberOfLegs, const std::string& name,
     const std::string& familiarName, FurinessLevel furriness, const int tailLength)
     :Animal(height, mass, numberOfLegs, name), //calls parent class constructor (Java uses "super()" here)
@@ -40,4 +52,15 @@ void Dog::printDogAttributes()
     //std::cout << std::setw(15) << Animal::mass;
     //this IS allowed because mass was set to "protected"
 
+}
+
+void Dog::eat()
+{
+    system("DorisEater.exe");
+
+}
+
+void Cat::doWeirdButCuteThing()
+{
+    system("prayKitty.mp4"); //put this file in the same directory to see the magic!
 }

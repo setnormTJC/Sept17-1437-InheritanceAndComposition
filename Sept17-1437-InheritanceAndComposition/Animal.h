@@ -1,5 +1,18 @@
 #pragma once
 #include <string>
+
+//class Animal
+//{
+//	std::string name; 
+//
+//	int height; 
+//};
+//
+//class Building : public Animal //A building is NOT a type of animal - don't do this!
+//{
+//	std::string cityInWhichBuildingIsLocated; 
+//};
+
 class Animal
 {
 private: //private access specifier "abstracts" away complexity (of understanding) 
@@ -15,6 +28,8 @@ public:
 	Animal(const int height, const double mass, int numberOfLegs = 4, const std::string& name = "TBD");
 
 	void printAnimalAttributes();
+
+	void eat(); 
 };
 
 enum class FurinessLevel
@@ -41,4 +56,20 @@ public:
 
 	/*play a sound file*/
 	void bark();
+
+	/*We would LIKE this function to OVERRIDE the parent's eat method (Animal::eat())*/
+	void eat(); 
+};
+
+/*Added after lecture*/
+class Cat : public Animal
+{
+	double concentrationOfAllergenFELD1{}; 
+
+public: 
+	/*Shows video of cat making strange "gesture"*/
+	void doWeirdButCuteThing(); 
+
+	/*plays audio file*/
+	void purr();
 };
