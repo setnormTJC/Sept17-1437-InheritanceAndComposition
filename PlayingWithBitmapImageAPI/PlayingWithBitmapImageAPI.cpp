@@ -3,8 +3,17 @@
 
 #include <iostream>
 
+#include"ImageBMP.h"
+
 int main()
 {
-    std::cout << "Hello World!\n";
+	ImageBMP theImage(100, 50, Color(123, 1, 123));
+
+	const std::string filename = "mySpecialImage.bmp";
+
+	theImage.writeImageFile(filename); 
+
+	std::system(filename.c_str());
+
 }
 
