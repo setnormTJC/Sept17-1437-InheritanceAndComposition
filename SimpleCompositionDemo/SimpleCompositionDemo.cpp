@@ -11,6 +11,9 @@
 struct ColorRGB
 {
     unsigned int R, G, B;  // 0 to 255
+
+    /*Look at my fancy documentation!*/
+    ColorRGB() = default; 
 };
 
 struct Point
@@ -19,25 +22,34 @@ struct Point
 };
 
 /*A `Line` is composed of a `Color` object*/
-struct Line
+class LineSegment
 {
+private: 
     //Point p1, p2; 
 
-    int x1, x2, y1, y2; 
-    //int lineLength; //calculated from x1, x2, y1, y2 -> maybe not a "great member var"
-    ColorRGB lineColor; 
+    int x1{}, x2{}, y1{}, y2{};
 
-    Line(const int x1, const int y1, const int x2, const int y2, const ColorRGB& lineColor)
+public: 
+    ColorRGB lineColor{};
+    LineSegment(const int x1, const int y1, const int x2, const int y2, const ColorRGB& lineColor)
         :
-        x1(x1), y1(y1), x2(x2), y2(y2)
+        x1(x1), y1(y1), x2(x2), y2(y2), lineColor(lineColor)
     {
     };
+
+    void printLineSegmentAttributes() const 
+    {
+        std::cout << "First point is: " << x1 << " , " << y1 << "\n";
+        std::cout << "Second point is: " << x2 << " , " << y2 << "\n";
+        std::cout << "Line color has RGB values = " << lineColor.R << "," << lineColor.G << "," << lineColor.B
+            << "\n";
+    }
 };
 
 /*A `Polygon` is composed of Line objects*/
 class Polygon
 {
-    std::vector<Line> lines; //SHOULD this be a dynamic array?  
+    std::vector<LineSegment> lines; //SHOULD this be a dynamic array?  
     //int numberOfLines; 
     //insert other attributes or functions (area, perimeter, etc.)
 
@@ -50,11 +62,25 @@ class Polygon
     }
 
 public: 
-    Polygon(const std::vector<Line>& lines)
+    Polygon(const std::vector<LineSegment>& lines)
         :lines(lines)
     {
 
     }
+
+    void printPolygonAttributes()
+    {
+        int currentLineNumberInPolygon = 1;
+
+        for (const auto& line : lines)
+        {
+            std::cout << "\n\nFor line number: " << currentLineNumberInPolygon << "\n";
+            line.printLineSegmentAttributes(); 
+
+            currentLineNumberInPolygon++;
+        }
+    }
+    
 };
 
 
@@ -75,11 +101,25 @@ int main()
     ColorRGB black = { 0, 0, 0 };
     ColorRGB white = { 255, 255, 255 };
     ColorRGB red = { 255, 0, 0 };
-    ColorRGB green = { 0, 255, 0 };
+    ColorRGB blue = { 0, 0, 255 };
 
-    Line leftLineOfSquare(0, 0, 0, 100, red);
+    LineSegment leftLineOfSquare(0, 0, 0, 100, black);
+    LineSegment rightLineOfSquare(100, 0, 100, 100, blue);
+    LineSegment topLineOfSquare(0, 100, 100, 100, white);
+    LineSegment bottomLineOfSquare(0, 0, 100, 0, red);
 
-    Polygon square({});
+
+    std::vector<LineSegment> theLinesComposingTheSquare =
+    {
+        leftLineOfSquare, 
+        rightLineOfSquare, 
+        topLineOfSquare,
+        bottomLineOfSquare
+    };
+
+    Polygon square(theLinesComposingTheSquare);
+
+    square.printPolygonAttributes(); 
 
 }
 
