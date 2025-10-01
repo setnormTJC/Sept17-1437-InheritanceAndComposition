@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ImageBMP">
+    <Position X="3.75" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAACAAAACKAAAQAAIAAABAMBAAAACAACAAAAAAAAA=</HashCode>
+      <FileName>ImageBMP.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="fileHeader" />
+      <Field Name="pixelData" />
+      <Field Name="infoHeader" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FileHeader">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAEAAAAAAAAAgAAAAAAAACAAAAAAAAgAAAAA=</HashCode>
+      <FileName>ImageBMP.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PixelData">
+    <Position X="2.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAQAAAAAAA=</HashCode>
+      <FileName>ImageBMP.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InfoHeader">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAACAAgAAAAAgAAKAgAAAgAAAAiAAAAgAAA=</HashCode>
+      <FileName>ImageBMP.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ColorEnum">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAQAGAAAAgAAABAAAAABBAAAAAAAIAAAADCAAAA=</HashCode>
+      <FileName>ImageBMP.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

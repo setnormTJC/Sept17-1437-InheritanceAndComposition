@@ -18,11 +18,18 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="image.cpp" />
+    <ClCompile Include="main-2.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9f980d37-4fee-483c-a3e5-7ac9d1b89eee}</ProjectGuid>
-    <RootNamespace>PlayingWithBitmapImageAPI</RootNamespace>
+    <ProjectGuid>{cdb49a30-70b9-42fb-9763-da6991b290e1}</ProjectGuid>
+    <RootNamespace>OnestudentsubmissionoftheImageBMP</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -122,16 +129,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="ImageBMP.cpp" />
-    <ClCompile Include="PlayingWithBitmapImageAPI.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ImageBMP.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
