@@ -12,6 +12,9 @@ int main() {
 	const int width = 640;
 	const int height = 480;
 
+	//a really insightful comment!
+
+	
 	image Image(width, height);
 
 	for (int y = 0; y < height; y++) {
