@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PlayingWithBitmapImageAPI",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "One student submission of the ImageBMP", "One student submission of the ImageBMP\One student submission of the ImageBMP.vcxproj", "{CDB49A30-70B9-42FB-9763-DA6991B290E1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "One student submission of Car simulator", "One student submission of Car simulator\One student submission of Car simulator.vcxproj", "{31EB9ED0-D0AC-4713-A82F-31935A6204B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{CDB49A30-70B9-42FB-9763-DA6991B290E1}.Release|x64.Build.0 = Release|x64
 		{CDB49A30-70B9-42FB-9763-DA6991B290E1}.Release|x86.ActiveCfg = Release|Win32
 		{CDB49A30-70B9-42FB-9763-DA6991B290E1}.Release|x86.Build.0 = Release|Win32
+		{31EB9ED0-D0AC-4713-A82F-31935A6204B5}.Debug|x64.ActiveCfg = Debug|x64
+		{31EB9ED0-D0AC-4713-A82F-31935A6204B5}.Debug|x64.Build.0 = Debug|x64
+		{31EB9ED0-D0AC-4713-A82F-31935A6204B5}.Debug|x86.ActiveCfg = Debug|Win32
+		{31EB9ED0-D0AC-4713-A82F-31935A6204B5}.Debug|x86.Build.0 = Debug|Win32
+		{31EB9ED0-D0AC-4713-A82F-31935A6204B5}.Release|x64.ActiveCfg = Release|x64
+		{31EB9ED0-D0AC-4713-A82F-31935A6204B5}.Release|x64.Build.0 = Release|x64
+		{31EB9ED0-D0AC-4713-A82F-31935A6204B5}.Release|x86.ActiveCfg = Release|Win32
+		{31EB9ED0-D0AC-4713-A82F-31935A6204B5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
